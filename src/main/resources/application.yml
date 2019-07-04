@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: Planner
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:33306/planner?useUnicode=true&characterEncoding=UTF-8&useSSL=false&useLegacyDatetimeCode=false&useJDBCCompliantTimezoneShift=true&serverTimezone=UTC
+    username: test
+    password: test
+  flyway:
+    enabled: false

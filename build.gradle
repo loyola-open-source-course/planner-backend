@@ -17,13 +17,13 @@ dependencies {
     compile (
             // Spring Framework
             'org.springframework.boot:spring-boot-starter-web',
-            'org.springframework.boot:spring-boot-starter-data-jpa',
+            //'org.springframework.boot:spring-boot-starter-data-jpa',
 
             // Database
-            'mysql:mysql-connector-java',
-            'org.hibernate:hibernate-core',
-            'org.hibernate:hibernate-spatial',
-            'org.flywaydb:flyway-core',
-            'redis.clients:jedis',
+            //'mysql:mysql-connector-java',
+            //'org.hibernate:hibernate-core',
+            //'org.hibernate:hibernate-spatial',
+            //'org.flywaydb:flyway-core',
+            //'redis.clients:jedis',
     )
 }
