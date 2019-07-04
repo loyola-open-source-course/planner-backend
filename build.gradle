@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'io.spring.dependency-management' version '1.0.7.RELEASE'
     id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id 'net.ltgt.apt' version '0.21'
 }
 
 group 'com.loyola'
@@ -14,16 +15,19 @@ repositories {
 }
 
 dependencies {
-    compile (
+    compile(
             // Spring Framework
             'org.springframework.boot:spring-boot-starter-web',
-            //'org.springframework.boot:spring-boot-starter-data-jpa',
+            'org.springframework.boot:spring-boot-starter-data-jpa',
 
             // Database
-            //'mysql:mysql-connector-java',
-            //'org.hibernate:hibernate-core',
-            //'org.hibernate:hibernate-spatial',
-            //'org.flywaydb:flyway-core',
-            //'redis.clients:jedis',
+            'mysql:mysql-connector-java',
+            'org.hibernate:hibernate-core',
+            'org.flywaydb:flyway-core'
     )
+
+    // ==============================   Compile only   ==============================
+    compileOnly('org.projectlombok:lombok:1.18.8')
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+
 }
