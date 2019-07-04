@@ -3,8 +3,6 @@ package com.loyola.planner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import javax.swing.*;
-
 /**
  * @author Alexander Kohonovsky
  * @since 2019-07-03

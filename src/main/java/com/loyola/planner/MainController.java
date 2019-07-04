@@ -3,12 +3,8 @@ package com.loyola.planner;
 import com.loyola.planner.models.Task;
 import com.loyola.planner.models.TaskStatus;
 import com.loyola.planner.repositories.TaskRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * @author Alexander Kohonovsky
