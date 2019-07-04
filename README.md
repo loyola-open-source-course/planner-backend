@@ -4,7 +4,7 @@ This tool is useful for planning and organizing people work.
 
 
 ## How to start development?
-1. Run MySQL database:
+1. Run MySQL database in a docker container (or install it separately as a standalone app):
     ```$bash
     docker run -d \
         --name=planner-db \
