@@ -1,5 +1,7 @@
-os: linux
 language: java
+os: linux
+dist: trusty
+jdk: oraclejdk8
 
 services:
   - docker
@@ -8,6 +10,7 @@ script:
   - ./gradlew build unpack
 
 deploy:
+  skip_cleanup: true
   provider: script
   script: bash docker_push.sh
   on:
