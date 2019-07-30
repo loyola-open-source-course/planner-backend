@@ -1,6 +1,6 @@
 # Team Planner (aka Trello)
 
-![](https://travis-ci.com/loyola-open-source-course/planner-backend.svg?branch=master)
+[![Build Status](https://travis-ci.com/loyola-open-source-course/planner-backend.svg?branch=master)](https://travis-ci.com/loyola-open-source-course/planner-backend)
 
 This tool is useful for planning and organizing people work.
 
