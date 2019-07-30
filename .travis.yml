@@ -4,6 +4,9 @@ language: java
 services:
   - docker
 
+script:
+  - ./gradlew build unpack
+
 deploy:
   provider: script
   script: bash docker_push.sh
