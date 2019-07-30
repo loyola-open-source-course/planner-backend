@@ -14,6 +14,13 @@ repositories {
     mavenCentral()
 }
 
+task('unpack', type: Copy) {
+    description 'Unpacks JAR file to the target directory.'
+    dependsOn jar
+    from zipTree(tasks.jar.outputs.files.singleFile)
+    into "build/unpacked"
+}
+
 dependencies {
     compile(
             // Spring Framework
