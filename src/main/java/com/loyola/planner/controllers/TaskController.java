@@ -1,7 +1,7 @@
 package com.loyola.planner.controllers;
 
 import com.loyola.planner.controllers.models.NewTaskRequest;
-import com.loyola.planner.entities.Task;
+import com.loyola.planner.controllers.models.TaskModel;
 import com.loyola.planner.entities.User;
 import com.loyola.planner.services.TaskService;
 import lombok.RequiredArgsConstructor;
@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author Alexander Kohonovsky
@@ -24,14 +26,14 @@ public class TaskController {
     private final TaskService taskService;
 
     @GetMapping("/api/tasks")
-    public Iterable<Task> getTasks() {
+    public List<TaskModel> getTasks() {
         return taskService.getTasks();
     }
 
     @PostMapping("/api/tasks")
-    public void getTasks(@RequestBody NewTaskRequest task,
-                         @AuthenticationPrincipal User currentUser) {
-        taskService.createTask(task, currentUser);
+    public TaskModel getTasks(@RequestBody NewTaskRequest task,
+                              @AuthenticationPrincipal User currentUser) {
+        return taskService.createTask(task, currentUser);
     }
 
 }

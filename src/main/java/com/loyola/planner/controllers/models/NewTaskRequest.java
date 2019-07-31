@@ -18,6 +18,6 @@ public class NewTaskRequest {
     private String description;
 
     @NotNull
-    private TaskStatus taskStatus;
+    private TaskStatus status;
 
 }
