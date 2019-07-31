@@ -31,6 +31,9 @@ public class User implements UserDetails {
     private String username;
 
     @NotNull
+    private String fullName;
+
+    @NotNull
     private String password;
 
     @Override
