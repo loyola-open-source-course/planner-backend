@@ -1,7 +1,7 @@
 package com.loyola.planner.repositories;
 
 import com.loyola.planner.entities.Task;
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
  * @since 2019-07-03
  */
 @Repository
-public interface TaskRepository extends PagingAndSortingRepository<Task, Long> {
+public interface TaskRepository extends JpaRepository<Task, Long> {
 
 }

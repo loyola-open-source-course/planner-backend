@@ -2,14 +2,13 @@ package com.loyola.planner.services;
 
 import com.loyola.planner.controllers.models.SignupRequest;
 import com.loyola.planner.entities.User;
+import com.loyola.planner.exceptions.UserAlreadyExist;
 import com.loyola.planner.repositories.UsersRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import javax.validation.Valid;
 
 /**
  * @author Alexander Kohonovsky
@@ -28,10 +27,15 @@ public class UserService implements UserDetailsService {
     }
 
     public void createUser(SignupRequest request) {
+        User foundUser = usersRepository.findByUsername(request.getUsername());
+        if (foundUser != null) {
+            throw new UserAlreadyExist();
+        }
+
         User user = new User();
-        user.setFullName(request.fullName);
-        user.setUsername(request.username);
-        user.setPassword(passwordEncoder.encode(request.password));
+        user.setFullName(request.getFullName());
+        user.setUsername(request.getUsername());
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
         usersRepository.save(user);
     }
 

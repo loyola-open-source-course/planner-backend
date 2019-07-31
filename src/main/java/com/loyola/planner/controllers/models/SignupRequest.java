@@ -1,22 +1,23 @@
 package com.loyola.planner.controllers.models;
 
+import lombok.Data;
+
 import javax.validation.constraints.NotNull;
 
 /**
  * @author Alexander Kohonovsky
  * @since 2019-07-30
  */
+@Data
 public class SignupRequest {
 
     @NotNull
-    public String fullName;
+    private String fullName;
 
     @NotNull
-    public String username;
+    private String username;
 
     @NotNull
-    public String password;
-
-
+    private String password;
 
 }

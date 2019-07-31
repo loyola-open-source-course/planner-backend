@@ -3,6 +3,7 @@ package com.loyola.planner.controllers;
 import com.loyola.planner.controllers.models.LoginRequest;
 import com.loyola.planner.controllers.models.LoginResponse;
 import com.loyola.planner.controllers.models.SignupRequest;
+import com.loyola.planner.controllers.models.SignupResponse;
 import com.loyola.planner.entities.User;
 import com.loyola.planner.services.UserService;
 import lombok.RequiredArgsConstructor;
