@@ -1,10 +1,13 @@
 #!/bin/bash
 
+echo ${DOCKER_USER}
+echo ${TRAVIS_BUILD_NUMBER}
+
 # Login to repository
-echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
 
 # Build image
-docker build -t "saniaky/planner-api:${TRAVIS_BUILD_NUMBER}" .
+docker build -t "saniaky/planner-api:$TRAVIS_BUILD_NUMBER" .
 
 # Push to repository
-docker push "saniaky/planner-api:${TRAVIS_BUILD_NUMBER}"
+docker push "saniaky/planner-api:$TRAVIS_BUILD_NUMBER"
