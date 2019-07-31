@@ -18,6 +18,7 @@ public class TaskModel {
     private TaskStatus status;
     private ZonedDateTime createdAt;
     private Long authorId;
+    private String authorName;
 
     public TaskModel(Task t) {
         this.id = t.getId();
@@ -25,6 +26,7 @@ public class TaskModel {
         this.status = t.getTaskStatus();
         this.createdAt = t.getCreatedAt();
         this.authorId = t.getAuthor().getId();
+        this.authorName = t.getAuthor().getFullName();
     }
 
 }
