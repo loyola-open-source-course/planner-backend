@@ -9,6 +9,8 @@ docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
 
 # Build image
 docker build -t "saniaky/planner-api:$TRAVIS_BUILD_NUMBER" .
+docker build -t "saniaky/planner-api:latest" .
 
 # Push to repository
 docker push "saniaky/planner-api:$TRAVIS_BUILD_NUMBER"
+docker build -t "saniaky/planner-api:latest" .
