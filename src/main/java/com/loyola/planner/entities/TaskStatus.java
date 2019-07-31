@@ -1,4 +1,4 @@
-package com.loyola.planner.models;
+package com.loyola.planner.entities;
 
 /**
  * @author Alexander Kohonovsky

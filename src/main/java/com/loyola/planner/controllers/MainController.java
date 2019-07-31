@@ -1,9 +1,12 @@
-package com.loyola.planner;
+package com.loyola.planner.controllers;
 
-import com.loyola.planner.models.Task;
-import com.loyola.planner.models.TaskStatus;
+import com.loyola.planner.entities.Task;
+import com.loyola.planner.entities.TaskStatus;
 import com.loyola.planner.repositories.TaskRepository;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -24,6 +27,12 @@ public class MainController {
         return "Hello world";
     }
 
+    @PreAuthorize("isAuthenticated()")
+    @GetMapping("/api/secured-hello-world")
+    public String securedHelloWorld() {
+        return "Authenticated Hello world";
+    }
+
     @GetMapping("/api/insert-sample-task")
     public Task insertSampleTask() {
         Task task = new Task();
@@ -36,6 +45,11 @@ public class MainController {
     @GetMapping("/api/tasks")
     public Iterable<Task> getTasks() {
         return taskRepository.findAll();
+    }
+
+    @PostMapping("/api/tasks")
+    public void getTasks(@RequestBody Task task) {
+        taskRepository.save(task);
     }
 
 }

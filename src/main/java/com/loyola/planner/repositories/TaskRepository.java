@@ -1,6 +1,6 @@
 package com.loyola.planner.repositories;
 
-import com.loyola.planner.models.Task;
+import com.loyola.planner.entities.Task;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,33 +1,31 @@
-package com.loyola.planner.models;
+package com.loyola.planner.entities;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
 
 /**
  * @author Alexander Kohonovsky
- * @since 2019-07-30
+ * @since 2019-07-03
  */
 @Entity
-@NoArgsConstructor
 @Getter
 @Setter
-public class User {
+public class Task {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
-    private String username;
+    private String description;
 
-    @NotNull
-    private String passwordHash;
+    @Enumerated(EnumType.STRING)
+    private TaskStatus taskStatus;
 
 }
