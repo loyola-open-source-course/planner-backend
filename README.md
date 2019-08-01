@@ -2,8 +2,11 @@
 
 [![Build Status](https://travis-ci.com/loyola-open-source-course/planner-backend.svg?branch=master)](https://travis-ci.com/loyola-open-source-course/planner-backend)
 
+## Mission Statement
 This tool is useful for planning and organizing people work.
 
+## Code of Conduct
+See full version at [CODE_OF_CONDUCT.md](https://github.com/loyola-open-source-course/planner-backend/blob/master/CODE_OF_CONDUCT.md)
 
 ## How to start development?
 1. Run MySQL database in a docker container (or install it separately as a standalone app):
@@ -38,4 +41,3 @@ This tool is useful for planning and organizing people work.
     
     ![Get endpoint](docs/browser-get.png)
     
-[TODO]
