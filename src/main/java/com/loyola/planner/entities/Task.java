@@ -4,8 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -29,10 +27,6 @@ public class Task {
 
     @NotNull
     private String description;
-
-    @NotNull
-    @Enumerated(EnumType.STRING)
-    private TaskStatus taskStatus;
 
     @NotNull
     private ZonedDateTime createdAt;

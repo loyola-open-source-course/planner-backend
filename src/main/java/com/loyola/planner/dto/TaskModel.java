@@ -1,7 +1,6 @@
 package com.loyola.planner.dto;
 
 import com.loyola.planner.entities.Task;
-import com.loyola.planner.entities.TaskStatus;
 import lombok.Data;
 
 import java.time.ZonedDateTime;
@@ -15,7 +14,6 @@ public class TaskModel {
 
     private Long id;
     private String description;
-    private TaskStatus status;
     private ZonedDateTime createdAt;
     private Long authorId;
     private String authorName;
@@ -23,7 +21,6 @@ public class TaskModel {
     public TaskModel(Task t) {
         this.id = t.getId();
         this.description = t.getDescription();
-        this.status = t.getTaskStatus();
         this.createdAt = t.getCreatedAt();
         this.authorId = t.getAuthor().getId();
         this.authorName = t.getAuthor().getFullName();

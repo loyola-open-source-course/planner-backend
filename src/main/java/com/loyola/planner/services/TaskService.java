@@ -29,7 +29,6 @@ public class TaskService {
     public TaskModel createTask(NewTaskRequest request, User currentUser) {
         Task newTask = new Task();
         newTask.setDescription(request.getDescription());
-        newTask.setTaskStatus(request.getStatus());
         newTask.setAuthor(currentUser);
         newTask.setCreatedAt(ZonedDateTime.now());
         Task savedTask = taskRepository.save(newTask);
