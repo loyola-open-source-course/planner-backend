@@ -1,10 +1,8 @@
-package com.loyola.planner.controllers.models;
+package com.loyola.planner.dto;
 
 import com.loyola.planner.entities.TaskStatus;
 import lombok.Data;
 
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.validation.constraints.NotNull;
 
 /**

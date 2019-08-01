@@ -21,10 +21,10 @@ import java.util.List;
  * @author Alexander Kohonovsky
  * @since 2019-07-30
  */
-@Entity
 @NoArgsConstructor
 @Getter
 @Setter
+@Entity(name = "user")
 public class User implements UserDetails {
 
     @Id

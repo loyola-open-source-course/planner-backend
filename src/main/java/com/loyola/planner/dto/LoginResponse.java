@@ -1,8 +1,6 @@
-package com.loyola.planner.controllers.models;
+package com.loyola.planner.dto;
 
 import com.loyola.planner.entities.User;
-
-import javax.validation.constraints.NotNull;
 
 /**
  * @author Alexander Kohonovsky

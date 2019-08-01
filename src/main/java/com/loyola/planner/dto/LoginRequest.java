@@ -1,4 +1,4 @@
-package com.loyola.planner.controllers.models;
+package com.loyola.planner.dto;
 
 import javax.validation.constraints.NotNull;
 

@@ -1,7 +1,7 @@
 package com.loyola.planner.controllers;
 
-import com.loyola.planner.controllers.models.NewTaskRequest;
-import com.loyola.planner.controllers.models.TaskModel;
+import com.loyola.planner.dto.NewTaskRequest;
+import com.loyola.planner.dto.TaskModel;
 import com.loyola.planner.entities.User;
 import com.loyola.planner.services.TaskService;
 import lombok.RequiredArgsConstructor;
@@ -25,12 +25,12 @@ public class TaskController {
 
     private final TaskService taskService;
 
-    @GetMapping("/api/tasks")
+    @GetMapping("/api/v1/tasks")
     public List<TaskModel> getTasks() {
         return taskService.getTasks();
     }
 
-    @PostMapping("/api/tasks")
+    @PostMapping("/api/v1/tasks")
     public TaskModel getTasks(@RequestBody NewTaskRequest task,
                               @AuthenticationPrincipal User currentUser) {
         return taskService.createTask(task, currentUser);

@@ -18,9 +18,9 @@ import java.time.ZonedDateTime;
  * @author Alexander Kohonovsky
  * @since 2019-07-03
  */
-@Entity
 @Getter
 @Setter
+@Entity(name = "task")
 public class Task {
 
     @Id

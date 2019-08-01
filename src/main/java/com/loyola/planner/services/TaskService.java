@@ -1,7 +1,7 @@
 package com.loyola.planner.services;
 
-import com.loyola.planner.controllers.models.NewTaskRequest;
-import com.loyola.planner.controllers.models.TaskModel;
+import com.loyola.planner.dto.NewTaskRequest;
+import com.loyola.planner.dto.TaskModel;
 import com.loyola.planner.entities.Task;
 import com.loyola.planner.entities.User;
 import com.loyola.planner.repositories.TaskRepository;

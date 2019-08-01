@@ -1,6 +1,6 @@
 package com.loyola.planner.services;
 
-import com.loyola.planner.controllers.models.SignupRequest;
+import com.loyola.planner.dto.SignupRequest;
 import com.loyola.planner.entities.User;
 import com.loyola.planner.exceptions.UserAlreadyExist;
 import com.loyola.planner.repositories.UsersRepository;
