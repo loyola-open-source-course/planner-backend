@@ -11,7 +11,6 @@ create table task
     id          bigint auto_increment primary key,
     created_at  datetime     not null,
     description varchar(255) not null,
-    task_status varchar(255) not null,
     author_id   bigint       not null
 ) engine = InnoDB;
 
