@@ -4,6 +4,7 @@ import com.loyola.planner.dto.NewTaskRequest;
 import com.loyola.planner.dto.TaskModel;
 import com.loyola.planner.entities.Task;
 import com.loyola.planner.entities.User;
+import com.loyola.planner.exceptions.NotFoundException;
 import com.loyola.planner.repositories.TaskRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -37,6 +38,13 @@ public class TaskService {
 
     public void deleteTask(Long taskId) {
         taskRepository.deleteById(taskId);
+    }
+
+    public TaskModel updateTask(Long taskId, NewTaskRequest newTask, User currentUser) {
+        Task task = taskRepository.findById(taskId).orElseThrow(NotFoundException::new);
+        task.setDescription(newTask.getDescription());
+        Task savedTask = taskRepository.save(task);
+        return new TaskModel(savedTask);
     }
 
 }
