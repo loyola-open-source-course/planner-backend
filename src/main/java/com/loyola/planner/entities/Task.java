@@ -31,6 +31,8 @@ public class Task {
     @NotNull
     private ZonedDateTime createdAt;
 
+    private ZonedDateTime updatedAt;
+
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private User author;
 

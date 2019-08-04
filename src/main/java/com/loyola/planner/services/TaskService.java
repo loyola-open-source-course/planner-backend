@@ -43,6 +43,7 @@ public class TaskService {
     public TaskModel updateTask(Long taskId, NewTaskRequest newTask, User currentUser) {
         Task task = taskRepository.findById(taskId).orElseThrow(NotFoundException::new);
         task.setDescription(newTask.getDescription());
+        task.setUpdatedAt(ZonedDateTime.now());
         Task savedTask = taskRepository.save(task);
         return new TaskModel(savedTask);
     }

@@ -15,6 +15,7 @@ public class TaskModel {
     private Long id;
     private String description;
     private ZonedDateTime createdAt;
+    private ZonedDateTime updatedAt;
     private Long authorId;
     private String authorName;
 
@@ -22,6 +23,7 @@ public class TaskModel {
         this.id = t.getId();
         this.description = t.getDescription();
         this.createdAt = t.getCreatedAt();
+        this.updatedAt = t.getUpdatedAt();
         this.authorId = t.getAuthor().getId();
         this.authorName = t.getAuthor().getFullName();
     }
